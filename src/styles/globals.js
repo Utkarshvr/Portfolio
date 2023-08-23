@@ -14,6 +14,9 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
 
   }
+  strong{
+    font-weight: 500;
+  }
   body {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
@@ -47,6 +50,20 @@ const GlobalStyles = createGlobalStyle`
   li{
     list-style: none;
   }
+  p {
+    margin-bottom: 0.5em;
+  }
+  
+.child-p-mb-0:first-child {
+  margin-bottom: 0;
+}
+
+  .profile-image {
+    position: absolute;
+    top: 36px;
+    right: 24px;
+  }
+  
 
 `;
 

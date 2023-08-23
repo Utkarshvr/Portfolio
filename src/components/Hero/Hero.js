@@ -1,4 +1,7 @@
-import React from "react";
+import dynamic from "next/dynamic";
+
+const ReactMarkdown = dynamic(() => import("react-markdown"));
+
 import Link from "next/link";
 
 import {
@@ -9,44 +12,53 @@ import {
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
 
+import { heroText, heroTitle } from "../../constants/constants";
+
 const Hero = (props) => (
   <>
     <Section row nopadding>
-      <LeftSection>
-        <SectionTitle main center>
-          Hi, I am{" "}
-          {/* <div
-            style={{
-              display: "inline-flex",
-              width: "40px",
-              height: "40px",
-              borderRadius: 100,
-              border: "2px solid #fff",
-            }}
+      <LeftSection style={{ display: "flex" }} className="relative">
+        <div>
+          <SectionTitle main center>
+            <ReactMarkdown className="child-p-mb-0">{heroTitle}</ReactMarkdown>
+          </SectionTitle>
+          <SectionText>
+            <ReactMarkdown>{heroText}</ReactMarkdown>
+          </SectionText>
+
+          <Link href="#about">
+            <Button onClick={props.handleClick}>Learn More</Button>
+          </Link>
+        </div>
+
+        <div style={{ position: "absolute", top: 0, right: 0, zIndex: -999 }}>
+          <div
+            style={{ position: "relative", width: "180px", height: "180px" }}
           >
             <img
-              style={{ width: "100%", height: "100%", borderRadius: "100%" }}
               src="/images/profile.jpg"
-              alt="Profile Pic"
+              style={{
+                borderRadius: "100%",
+                border: "2px solid #fff",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover", // Ensures the image covers the entire container
+              }}
+              alt="Profile"
             />
-          </div> */}
-          <br />A Web Developer
-        </SectionTitle>
-        <SectionText>
-          <strong style={{ fontWeight: 700 }}>👋 Hi, I'm Utkarsh!</strong>
-          <br />A 17-year-old aspiring Full Stack Web Developer, currently
-          balancing studies while working on projects using the MERN stack
-          wonders with the MERN stack. 🚀
-          <br />
-          I've already dabbled in the world of freelancing, where I brought
-          captivating frontend experiences to life. 🌟
-          <br />
-          Explore my digital playground and witness the future of web
-          development in the making!
-        </SectionText>
-        <Link href="#about">
-          <Button onClick={props.handleClick}>Learn More</Button>
-        </Link>
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                background: "rgba(0,0,0,0.4)",
+                borderRadius: "100%",
+              }}
+            ></div>
+          </div>
+        </div>
       </LeftSection>
     </Section>
   </>

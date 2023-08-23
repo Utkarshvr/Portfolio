@@ -21,7 +21,7 @@ import {
 import { projects } from "../../constants/constants";
 
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section id="projects">
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
@@ -29,7 +29,7 @@ const Projects = () => (
         return (
           <BlogCard key={i}>
             <Img
-              style={{ maxWidth: 400, maxHeight: 200, objectFit: "contain" }}
+              style={{ width: "100%", maxHeight: 200, objectFit: "fill" }}
               src={p.image}
             />
             <TitleContent>

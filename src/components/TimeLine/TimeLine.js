@@ -1,5 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 
+import dynamic from "next/dynamic";
+
+const ReactMarkdown = dynamic(() => import("react-markdown"));
+
 import {
   CarouselButton,
   CarouselButtonDot,
@@ -17,7 +21,7 @@ import {
   SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import { TimeLineData } from "../../constants/constants";
+import { TimeLineData, aboutMe } from "../../constants/constants";
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
@@ -67,16 +71,7 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        If you're seeking a web developer who can transform your ideas into
-        engaging web applications using the MERN stack, React.js, and SCSS, I'm
-        here to help. Let's collaborate and create a standout online presence
-        for your business.
-        <br />
-        <br />
-        Whether you need a dynamic e-commerce platform, a real-time chat
-        application, or a scalable web portal, I have the skills to bring your
-        vision to life. I prioritize clean code, performance optimization, and
-        security best practices to deliver high-quality web apps.
+        <ReactMarkdown>{aboutMe}</ReactMarkdown>
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>

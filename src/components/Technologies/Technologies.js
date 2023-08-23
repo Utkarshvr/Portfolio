@@ -1,4 +1,9 @@
 import React from "react";
+
+import dynamic from "next/dynamic";
+
+const ReactMarkdown = dynamic(() => import("react-markdown"));
+
 import { DiFirebase, DiReact, DiZend } from "react-icons/di";
 import {
   Section,
@@ -13,6 +18,13 @@ import {
   ListParagraph,
   ListTitle,
 } from "./TechnologiesStyles";
+
+const techs = `
+- React.js  
+- Material UI  
+- Tailwind CSS
+- Bootstrap  
+`;
 
 const Technologies = () => (
   <Section id="tech">
@@ -31,7 +43,7 @@ const Technologies = () => (
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
             Experiece with <br />
-            React.js, Material-UI
+            <ReactMarkdown>{techs}</ReactMarkdown>
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -43,7 +55,7 @@ const Technologies = () => (
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
             Experience with <br />
-            Node and Databases
+            MONGODB
           </ListParagraph>
         </ListContainer>
       </ListItem>
