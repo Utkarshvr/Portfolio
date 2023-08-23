@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
-const ReactMarkdown = dynamic(() => import("react-markdown"));
+// const ReactMarkdown = dynamic(() => import("react-markdown"));
 
 import {
   CarouselButton,
@@ -71,7 +71,8 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        <ReactMarkdown>{aboutMe}</ReactMarkdown>
+        {/* <ReactMarkdown>{aboutMe}</ReactMarkdown> */}
+        {aboutMe}
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>

@@ -1,6 +1,6 @@
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
-const ReactMarkdown = dynamic(() => import("react-markdown"));
+// const ReactMarkdown = dynamic(() => import("react-markdown"));
 
 import Link from "next/link";
 
@@ -20,10 +20,12 @@ const Hero = (props) => (
       <LeftSection style={{ display: "flex" }} className="relative">
         <div>
           <SectionTitle main center>
-            <ReactMarkdown className="child-p-mb-0">{heroTitle}</ReactMarkdown>
+            {/* <ReactMarkdown className="child-p-mb-0">{heroTitle}</ReactMarkdown> */}
+            {heroTitle}
           </SectionTitle>
           <SectionText>
-            <ReactMarkdown>{heroText}</ReactMarkdown>
+            {/* <ReactMarkdown>{heroText}</ReactMarkdown> */}
+            {heroText}
           </SectionText>
 
           <Link href="#about">

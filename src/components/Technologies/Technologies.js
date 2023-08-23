@@ -1,8 +1,8 @@
 import React from "react";
 
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
-const ReactMarkdown = dynamic(() => import("react-markdown"));
+// const ReactMarkdown = dynamic(() => import("react-markdown"));
 
 import { DiFirebase, DiReact, DiZend } from "react-icons/di";
 import {
@@ -43,7 +43,8 @@ const Technologies = () => (
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
             Experiece with <br />
-            <ReactMarkdown>{techs}</ReactMarkdown>
+            {/* <ReactMarkdown>{techs}</ReactMarkdown> */}
+            {techs}
           </ListParagraph>
         </ListContainer>
       </ListItem>
