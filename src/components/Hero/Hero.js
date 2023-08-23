@@ -33,15 +33,16 @@ const Hero = (props) => (
           <br />A Web Developer
         </SectionTitle>
         <SectionText>
-          My name is <strong style={{ fontWeight: 700 }}>Utkarsh</strong> and I
-          am a{" "}
-          <strong style={{ fontWeight: 700 }}>MERN Stack Developer.</strong>{" "}
-          <br />I am{" "}
-          <strong style={{ fontWeight: 700 }}>
-            {" "}
-            17 y/o (11<sup>th</sup> Std - PCM)
-          </strong>{" "}
-          and I have been practicing Web Development from 3 years.
+          <strong style={{ fontWeight: 700 }}>👋 Hi, I'm Utkarsh!</strong>
+          <br />A 17-year-old aspiring Full Stack Web Developer, currently
+          balancing studies while working on projects using the MERN stack
+          wonders with the MERN stack. 🚀
+          <br />
+          I've already dabbled in the world of freelancing, where I brought
+          captivating frontend experiences to life. 🌟
+          <br />
+          Explore my digital playground and witness the future of web
+          development in the making!
         </SectionText>
         <Link href="#about">
           <Button onClick={props.handleClick}>Learn More</Button>
